@@ -37,3 +37,12 @@
 - ex) #7: commit message
 - 다만 branch를 만들지 못한 경우 아래와 같이 표현한다.
 - ex) #hotfix: commit message
+
+# 실행을 위해서
+실행을 위해서는 
+.env 파일을 root에 두고 아래 내용을 채워주세요.
+
+```commandline
+NOTION_API_KEY = your_api_key
+DATABASE_ID = your_database_id
+```
