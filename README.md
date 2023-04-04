@@ -22,3 +22,18 @@
 3. google calendar api를 활용해서 event가 종료된 것을 감지하고
    - jenkins가 15분에 한 번씩 종료된 event 감지
 4. notion-api를 활용해서 다이어리에 추가
+
+
+# git convention
+
+### branch
+- 브랜치는 기능별로 만들어진다. 
+- 모든 기능은 이슈를 기반으로 만들어진다.
+- 따라서 branch도 이슈를 포함하여 만든다.
+- ex) #7 or #7/extra-branch-name
+
+### commit
+- commit은 branch에 종속적으로 만들어진다.
+- ex) #7: commit message
+- 다만 branch를 만들지 못한 경우 아래와 같이 표현한다.
+- ex) #hotfix: commit message
