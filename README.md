@@ -48,3 +48,10 @@
 NOTION_API_KEY = your_api_key
 DATABASE_ID = your_database_id
 ```
+
+python 가상환경을 구축하고 실행해주세요.
+```python
+python -m venv venv 
+source ./venv/bin/activate
+pip install -r requirements.txt
+```
