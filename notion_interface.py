@@ -70,6 +70,8 @@ def create_daily_task(database_id, headers, time):
 
     res = requests.request("POST", url, headers=headers, data=payload)
     print("status_code : ", res.status_code)
+    print("날짜 : ", notion_date_text)
+    print("시간대 : ", time)
 
 def create_database(page_id, headers):
 
