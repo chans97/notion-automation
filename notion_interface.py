@@ -1,6 +1,6 @@
 import json
 import requests
-from custom_date import getCustom6dayLate
+from custom_date import getCustom6dayLater
 
 
 def readDatabase(databaseID, headers):

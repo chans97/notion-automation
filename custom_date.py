@@ -1,8 +1,10 @@
 import datetime
 
+
 def getCustomToday(dateFormat):
     now = datetime.datetime.now()
     return now.strftime(dateFormat)
+
 
 def getCustom6dayLater(dateFormat):
     now = datetime.datetime.now()
