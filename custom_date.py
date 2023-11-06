@@ -4,9 +4,9 @@ def getCustomToday(dateFormat):
     now = datetime.datetime.now()
     return now.strftime(dateFormat)
 
-def getCustomTomorrow(dateFormat):
+def getCustom6dayLater(dateFormat):
     now = datetime.datetime.now()
-    tomorrow = now + datetime.timedelta(days=1)
+    tomorrow = now + datetime.timedelta(days=6)
     return tomorrow.strftime(dateFormat)
     # return tomorrow.strftime('%Y-%m-%d')
 #

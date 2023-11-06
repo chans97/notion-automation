@@ -1,6 +1,6 @@
 import json
 import requests
-from custom_date import getCustomTomorrow
+from custom_date import getCustom6dayLate
 
 
 def readDatabase(databaseID, headers):
@@ -48,13 +48,36 @@ def appendBlock(blockId, headers):
 
 
 def create_daily_task(database_id, headers, time):
-    notion_date_text = getCustomTomorrow('%Y-%m-%d')
+    notion_date_text = getCustom6dayLater('%Y-%m-%d')
     url = 'https://api.notion.com/v1/pages'
     payload = json.dumps({
         "parent": {
             "database_id": database_id
         },
         "properties": {
+            '기록': {
+                'id': 'title',
+                'type': 'title',
+                'title': [
+                    {
+                        'type': 'text',
+                        'text': {
+                            'content': notion_date_text,
+                            'link': None
+                        },
+                        'annotations': {
+                            'bold': False,
+                            'italic': False,
+                            'strikethrough': False,
+                            'underline': False,
+                            'code': False,
+                            'color': 'default'
+                        },
+                        'plain_text': notion_date_text,
+                        'href': None
+                    }
+                ]
+            },
             "시간대": {
                 "select": {
                     "name": time
