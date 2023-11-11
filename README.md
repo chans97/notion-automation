@@ -12,18 +12,17 @@
 +) 그 전날 만들어져야 계획도 같이 사용할텐데 그 부분이 안되어 있다. 그 부분까지 완료해야겠다.
 
 ## 구현 기능
-- [ ] 매일 자정에 다음 날 일기 템플릿 및 시간별 일지 생성
+- [X] 매일 자정에 6일 뒤 시간별 일지 생성
 - [ ] 구글 캘린더에 종료된 일정 자동 기록 
 
 ## 서비스 구현
-1. 우선 24시간 동작해줄 서버가 필요하다. → oracle 무료 서버로 이용 (완료)
-2. notion-api를 활용해서 템플릿 생성
+1. notion-api를 활용해서 템플릿 생성
    - notion table을 활용해서 템플릿을 만들어 놓고
    - 그 table에 item을 추가하는 방식
    - jenkins가 자정에 해당 python script 실행
-3. google calendar api를 활용해서 event가 종료된 것을 감지하고
+2. google calendar api를 활용해서 event가 종료된 것을 감지하고
    - jenkins가 15분에 한 번씩 종료된 event 감지
-4. notion-api를 활용해서 다이어리에 추가
+3. notion-api를 활용해서 다이어리에 추가
 
 
 # git convention

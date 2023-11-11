@@ -1,6 +1,9 @@
 from dotenv import dotenv_values
 from notion_client import Client
-from notion_interface import *
+
+from infrastructure.page_interface import read_page
+from service.apply_day_filter_to_db import apply_day_filter_to_db
+from service.create_task import create_daily_task
 
 # notion api 초기화
 config = dotenv_values(".env")
@@ -16,6 +19,9 @@ DAILY_TASK_DATABASE_ID = config.get('DAILY_TASK_DATABASE_ID')
 
 
 def main():
+    # apply_day_filter_to_task_in_diary(DATABAST_ID, )
+    # apply_day_filter_to_db(DAILY_TASK_DATABASE_ID, headers)
+    # read_page("6c480ee6e4ac4079979d1254aa9a0a40", headers)
     create_daily_task(DAILY_TASK_DATABASE_ID, headers, "오전")
     create_daily_task(DAILY_TASK_DATABASE_ID, headers, "오후 전반")
     create_daily_task(DAILY_TASK_DATABASE_ID, headers, "오후 후반")
