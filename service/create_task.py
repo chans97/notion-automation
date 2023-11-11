@@ -44,6 +44,26 @@ def create_daily_task(database_id, headers, time):
                 "date": {
                     "start": notion_date_text
                 }
+            },
+            "계획": {
+                "rich_text": [
+                    {
+                        "type": "text",
+                        "text": {
+                            "content": " ",
+                        }
+                    }
+                ]
+            },
+            "실제": {
+                "rich_text": [
+                    {
+                        "type": "text",
+                        "text": {
+                            "content": " ",
+                        }
+                    }
+                ]
             }
         }
     }
