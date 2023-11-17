@@ -50,7 +50,7 @@ def create_daily_task(database_id, headers, time):
                     {
                         "type": "text",
                         "text": {
-                            "content": " ",
+                            "content": "[계획] ",
                         }
                     }
                 ]
@@ -60,7 +60,7 @@ def create_daily_task(database_id, headers, time):
                     {
                         "type": "text",
                         "text": {
-                            "content": " ",
+                            "content": "[실제] ",
                         }
                     }
                 ]
